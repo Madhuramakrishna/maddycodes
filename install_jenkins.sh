@@ -7,14 +7,16 @@ dnf install java-1.8.0-openjdk-devel -y;
 echo "\n---------------------------"
 echo "JAVA version installed is\n";
 java -version;
-
+echo "\n---------------------------"
 echo "Copy the repo file\n"
 cp jenkins.repo /etc/yum.repos.d/;
-
+echo "\n---------------------------"
 sleep 5;
 
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
 
+echo "Install Jenkins";
+echo "\n---------------------------"
 sudo dnf install jenkins --nobest -y;
 
 systemctl start jenkins;
