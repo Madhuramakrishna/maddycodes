@@ -1,1 +1,5 @@
 git version
+git branch
+git status
+git stash
+git stash pop
