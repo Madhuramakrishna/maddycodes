@@ -3,3 +3,6 @@ git branch
 git status
 git stash
 git stash pop
+git branch feature --> To create the branch
+git branch --> To list all branches
+git checkout feature --> to switch the branch
