@@ -3,7 +3,7 @@
 set -x
 
 echo "Install Java"
-dnf install java-1.8.0-openjdk-devel -y;
+yum install java-1.8.0-openjdk-devel -y;
 echo "\n---------------------------"
 echo "JAVA version installed is\n";
 java -version;
@@ -17,7 +17,7 @@ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
 
 echo "Install Jenkins";
 echo "\n---------------------------"
-sudo dnf install jenkins --nobest -y;
+sudo yum install jenkins -y;
 
 systemctl start jenkins;
 
