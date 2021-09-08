@@ -1,31 +1,36 @@
 #!/bin/bash
 
-set -x
+#set -x
+
+sudo amazon-linux-extras install epel -y
+
+yum update -y
 
 echo "Install Java"
+
 yum install java-1.8.0-openjdk-devel -y;
 echo "\n---------------------------"
 echo "JAVA version installed is\n";
 java -version;
 echo "\n---------------------------"
 echo "Copy the repo file\n"
-cp jenkins.repo /etc/yum.repos.d/;
+sudo cp jenkins.repo /etc/yum.repos.d/;
 echo "\n---------------------------"
 sleep 5;
 
-rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
 
 echo "Install Jenkins";
 echo "\n---------------------------"
 sudo yum install jenkins -y;
 
-systemctl start jenkins;
+sudo systemctl start jenkins;
 
-systemctl status jenkins;
+sudo systemctl status jenkins;
 
-firewall-cmd --add-port=8080/tcp --permanent;
+#firewall-cmd --add-port=8080/tcp --permanent;
 
-firewall-cmd --reload;
+#firewall-cmd --reload;
 
 cat /var/lib/jenkins/secrets/initialAdminPassword
 
