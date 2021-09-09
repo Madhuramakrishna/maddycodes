@@ -32,7 +32,7 @@ sudo systemctl status jenkins;
 
 #firewall-cmd --reload;
 
-sleep 5;
+sleep 10;
 
-cat /var/lib/jenkins/secrets/initialAdminPassword
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
