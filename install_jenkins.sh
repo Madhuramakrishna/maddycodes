@@ -4,11 +4,11 @@
 
 sudo amazon-linux-extras install epel -y
 
-yum update -y
+sudo yum update -y
 
 echo "Install Java"
 
-yum install java -y;
+sudo yum install java -y;
 echo "\n---------------------------"
 echo "JAVA version installed is\n";
 java -version;
