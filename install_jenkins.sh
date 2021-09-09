@@ -8,7 +8,7 @@ yum update -y
 
 echo "Install Java"
 
-yum install java-1.8.0-openjdk-devel -y;
+yum install java -y;
 echo "\n---------------------------"
 echo "JAVA version installed is\n";
 java -version;
